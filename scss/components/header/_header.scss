@@ -1,0 +1,20 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  color: rgb(57, 140, 159);
+}
+
+

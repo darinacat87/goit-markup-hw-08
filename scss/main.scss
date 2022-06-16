@@ -1,0 +1,20 @@
+// utils
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+
+// base styles
+@import "./base/common";
+@import "./base/reset";
+@import "./base/container";
+
+// components
+@import "./components/header/module";
+@import "./components/hero/module";
+@import "./components/button";
+@import "./components/modal/module";
+@import "./components/features/features";
+@import "./components/about/module";
+@import "./components/team/module";
+@import "./components/clients/clients";
+@import "./components/footer/module";
+@import "./components/portfolio/portfolio";

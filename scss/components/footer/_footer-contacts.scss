@@ -1,0 +1,45 @@
+.footer-contacts__adress {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-txt-cl);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}
+
+.footer-contacts__mailto {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-timing) var(--transition-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}
+
+.footer-contacts__phone {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-timing) var(--transition-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}
+
+.footer-contacts__item {
+  margin-bottom: 9px;
+}
+
+.footer-contacts__item:last-child {
+  margin-bottom: 0;
+}
