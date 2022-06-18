@@ -1,14 +1,21 @@
+.about {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
+}
+
 .about-list {
+  @extend %list;
   display: flex;
 }
 
 .about-list__item {
   position: relative;
-  width: 370px;
-}
-
-.about-list__item:not(:last-child) {
-  margin-right: 30px;
+  width: calc((100%-6 * 15px) / 3);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .about-list__item-caption {

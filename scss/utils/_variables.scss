@@ -1,27 +1,24 @@
-
 //fonts
 :root {
-    --main-font: 'Roboto', sans-serif;
-    --secondary-font: 'Raleway', sans-serif;
+  $main-font: "Roboto", sans-serif;
+  $secondary-font: "Raleway", sans-serif;
 
-    //text colors
-    --accent-cl: #2196F3;
-    --main-txt-cl: #212121;
-    --secondary-txt-cl: #FFFFFF;
-    --gris-txt-cl: #757575;
-    --icon-first-color: #AFB1B8;
+  //text colors
+  $accent-cl: #2196f3;
+  $main-txt-cl: #212121;
+  $secondary-txt-cl: #ffffff;
+  $gris-txt-cl: #757575;
+  $icon-first-color: #afb1b8;
 
+  //background colors
+  $accent-bg-cl: #2196f3;
+  $main-bg-cl: #ffffff;
+  $secondary-bg-cl: #e5e5e5;
+  $gris-bg-cl: #f5f4fa;
+  $dark-bg-cl: #2f303a;
+  $blue-bg-cl: #188ce8;
 
-    //background colors
-    --accent-bg-cl: #2196F3;
-    --main-bg-cl: #FFFFFF;
-    --secondary-bg-cl: #E5E5E5;
-    --gris-bg-cl: #F5F4FA;
-    --dark-bg-cl: #2F303A;
-    --blue-bg-cl: #188CE8;
-
-    // transition
-    --transition-timing: 250ms;
-    --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+  // transition
+  $transition-timing: 250ms;
+  $transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

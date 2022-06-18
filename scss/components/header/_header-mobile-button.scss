@@ -1,0 +1,37 @@
+
+.menu-button {
+  display: inline-flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  z-index: 100;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-button .icon-close-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-close-menu {
+  display: block;
+  color: current;
+}
+
+.menu-button:hover .icon-close-menu,
+.menu-button:focus .icon-close-menu {
+  fill: var(--accent-cl);
+}
+
+.menu-button:hover .icon-menu,
+.menu-button:focus .icon-menu {
+  fill: var(--accent-cl);
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}

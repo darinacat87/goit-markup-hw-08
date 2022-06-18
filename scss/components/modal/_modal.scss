@@ -8,6 +8,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity var(--transition-timing) var(--transition-function),
     visibility var(--transition-timing) var(--transition-function);
+    overflow-y: scroll;
 }
 
 .modal-backdrop.is-hidden {

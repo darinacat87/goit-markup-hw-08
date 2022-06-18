@@ -6,15 +6,31 @@
   letter-spacing: 0.03em;
   color: var(--accent-cl);
   text-decoration: none;
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02px)) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .header-logo {
-  display: block;
-  padding-top: 25px;
-  padding-bottom: 24px;
-  margin-right: 93px;
-}
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02px)) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 24px;
+    padding-bottom: 25px;
 
-.header-logo__caption {
-  color: #000000;
+    &__caption {
+      color: #000000;
+    }
+  }
 }
