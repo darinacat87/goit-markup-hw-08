@@ -1,3 +1,6 @@
+.mobile-menu-is-open .header-logo {
+  display: none;
+}
 .header-logo {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -6,13 +9,15 @@
   letter-spacing: 0.03em;
   color: var(--accent-cl);
   text-decoration: none;
-}
-
-.header-logo {
   display: block;
   padding-top: 25px;
   padding-bottom: 24px;
+
   margin-right: 93px;
+  z-index: 9;
+  @include mq(tablet-only) {
+    margin-right: 53px;
+  }
 }
 
 .header-logo__caption {
