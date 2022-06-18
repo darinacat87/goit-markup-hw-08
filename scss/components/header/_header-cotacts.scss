@@ -24,7 +24,7 @@ font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
 
-    transition: color $transition-duration $transition-timing-function;
+    transition: color var(--transition-duration) var(--transition-timing-function);
 
     &:hover, &:focus {
         color: var(--accent-cl);
