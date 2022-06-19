@@ -3,13 +3,17 @@
   padding: 0;
   margin: 0;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin: -15px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: -15px;
   }
 }
@@ -17,25 +21,19 @@
 .features-item {
   width: 100%;
 
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
-    }
-
-    @media screen and (min-width: 768px) {
-      width: calc((100%-4 * 15px) / 2);
-      margin: 15px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: calc((100%-8 * 15px) / 4);
-      margin: 15px;
-    }
+  @include mq(mobile-only) {
+    margin-bottom: 30px;
   }
-}
 
-.features-item:not(:last-child) {
-  margin-right: 30px;
+  @include mq(tablet) {
+    width: calc((100%-4 * 15px) / 2 - 30px);
+    margin: 15px;
+  }
+
+  @include mq(desktop) {
+    width: calc((100%-8 * 15px) / 4 - 30px);
+    margin: 15px;
+  }
 }
 
 .features-icon-group {
@@ -57,6 +55,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-txt-cl);
+
+  @include mq(mobile-only) {
+    text-align: center;
+  }
 }
 
 .features-description {
