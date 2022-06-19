@@ -68,8 +68,8 @@ img {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0;
+  padding-right: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -97,8 +97,8 @@ img {
   padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  /*   padding-left: 15px;
+  padding-right: 15px; */
 }
 
 .mobile-menu-is-open .header {
@@ -961,13 +961,42 @@ img {
   display: flex;
 }
 
+@media screen and (max-width: 767.98px) {
+  .clients-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .clients-item {
   width: 170px;
   height: 92px;
 }
 
+@media screen and (max-width: 767.98px) {
+  .clients-item {
+    width: 210px;
+    height: 92px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 .clients-item:not(:last-child) {
   margin-right: 30px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .clients-item:not(:last-child) {
+    margin-right: 0px;
+  }
 }
 
 .clients-link {
@@ -998,7 +1027,7 @@ img {
   fill: currentColor;
 }
 
-clients-members {
+.clients-members {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -1006,6 +1035,13 @@ clients-members {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+}
+
+@media screen and (max-width: 767.98px) {
+  .clients-members {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
 }
 
 .footer {
@@ -1162,8 +1198,9 @@ clients-members {
 
 @media screen and (max-width: 1199.98px) {
   .subscribe-form__email {
-    width: 450px;
+    margin-right: 0px;
     margin-bottom: 20px;
+    width: 450px;
   }
 }
 
