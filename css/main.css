@@ -1421,10 +1421,21 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767.98px) {
+  .portfolio .navigation-portfolio-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .nav-btn:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .navigation-btn {
@@ -1460,6 +1471,9 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .projects-item {
@@ -1471,6 +1485,24 @@ img {
 .projects-item:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (max-width: 767.98px) {
+  .projects-item {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .projects-item {
+    margin-right: 0px;
+    width: 354px;
+  }
+}
+
+.projects-item-link {
+  width: 100%;
 }
 
 .projects-item:nth-child(3n) {
@@ -1497,10 +1529,19 @@ img {
 }
 
 .projects-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: flex-start;
   padding-top: 20px;
   padding-right: 24px;
   padding-left: 24px;
   padding-bottom: 20px;
+  height: 146px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
