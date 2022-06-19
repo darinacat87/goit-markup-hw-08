@@ -159,6 +159,10 @@
   cursor: pointer;
   user-select: none;
   color: var(--gris-txt-cl);
+
+  @include mq(not-desktop) {
+    font-size: 12px;
+  }
 }
 
 .checkbox-label-link {

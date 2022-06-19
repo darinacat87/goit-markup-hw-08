@@ -499,6 +499,13 @@ img {
   transition: transform var(--transition-timing) var(--transition-function), opacity var(--transition-timing) var(--transition-function), -webkit-transform var(--transition-timing) var(--transition-function);
 }
 
+@media screen and (max-width: 1199.98px) {
+  .modal-wrapper {
+    width: 450px;
+    height: 609px;
+  }
+}
+
 .modal-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,6 +518,12 @@ img {
   font-size: 20px;
   line-height: 1.15;
   color: var(--main-txt-cl);
+}
+
+@media screen and (max-width: 1199.98px) {
+  .modal-title {
+    text-align: center;
+  }
 }
 
 .close-button {
@@ -741,6 +754,12 @@ img {
       -ms-user-select: none;
           user-select: none;
   color: var(--gris-txt-cl);
+}
+
+@media screen and (max-width: 1199.98px) {
+  .checkbox-label {
+    font-size: 12px;
+  }
 }
 
 .checkbox-label-link {

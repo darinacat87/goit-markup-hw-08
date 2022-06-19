@@ -8,7 +8,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity var(--transition-timing) var(--transition-function),
     visibility var(--transition-timing) var(--transition-function);
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 .modal-backdrop.is-hidden {
@@ -37,6 +37,11 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition-timing) var(--transition-function),
     opacity var(--transition-timing) var(--transition-function);
+
+  @include mq(not-desktop) {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .modal-title {
@@ -47,4 +52,8 @@
   font-size: 20px;
   line-height: 1.15;
   color: var(--main-txt-cl);
+
+  @include mq(not-desktop) {
+    text-align: center;
+  }
 }
