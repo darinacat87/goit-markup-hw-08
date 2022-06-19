@@ -1,90 +1,48 @@
-.contacts__item{
-    @media screen and (max-width:$mobile){
-        &:not(:last-child){
-        margin-bottom: 32px;
-        }
-    }
-
-    @media screen and (min-width:$tablet) and (max-width:($desktop - 0.02px)){
-        &:not(:first-child) {
-            margin-top: 10px;
-        }
-    }
-
-    @media screen and (min-width:$desktop){
-        margin-right: 30px;
-    }
-    
-}
-
-.contacts__mailto {
-color: var(--gris-txt-cl);
-font-weight: 500;
-    text-decoration: none;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-
-    transition: color $transition-duration $transition-timing-function;
-
-    &:hover, &:focus {
-        color: var(--accent-cl);
-         }
-    @media screen and (max-width:$mobile){
-        font-size: 24px;
-    }
-    @media screen and (min-width:$tablet){
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-    }
-    @media screen and (min-width:$desktop) {
-        padding-top: 32px;
-        padding-bottom: 32px;     
-    }
-
-    &--accent-color {
-       @media screen and (max-width:$mobile){
-            color: (var(--accent-cl));
-           font-size: 34px;
-            line-height: 1.18;
-        }  
-    }
-.contacts__icon {
-    display: none;
-
-    @media screen and (min-width:$tablet) {
-        display: flex;
-        margin-right: 10px;
-        fill: currentColor;
-        
-    }
-}
-
-
-}
-
-
-
-
-/*
 .contacts {
   display: flex;
   align-items: center;
   margin-left: auto;
+
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  @include mq(tablet-only) {
+    display: block;
+  }
 }
 
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
+.contacts__item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+
+  &:last-child {
+    margin-left: 50px;
+  }
+
+  @include mq(tablet-only) {
+    font-size: 12px;
+
+    &:first-child {
+      padding-top: 18px;
+      padding-bottom: 10px;
+    }
+
+    &:last-child {
+      padding-top: 0px;
+      padding-bottom: 18px;
+      margin-left: 0px;
+    }
+  }
 }
 
 .contacts__mailto {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--gris-txt-cl);
   transition: color var(--transition-timing) var(--transition-function);
@@ -97,12 +55,7 @@ font-weight: 500;
 
 .contacts__phone {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--gris-txt-cl);
 
@@ -116,4 +69,3 @@ font-weight: 500;
   margin-right: 10px;
   fill: currentColor;
 }
-*/

@@ -1,3 +1,6 @@
+.mobile-menu-is-open .header-logo {
+  display: none;
+}
 .header-logo {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -6,31 +9,17 @@
   letter-spacing: 0.03em;
   color: var(--accent-cl);
   text-decoration: none;
-  @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02px)) {
-    margin-right: 88px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-right: 93px;
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 24px;
 
-    font-size: 26px;
-    line-height: 1.19;
+  margin-right: 93px;
+  z-index: 9;
+  @include mq(tablet-only) {
+    margin-right: 53px;
   }
 }
 
-.header-logo {
-  display: inline-block;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02px)) {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding-top: 24px;
-    padding-bottom: 25px;
-
-    &__caption {
-      color: #000000;
-    }
-  }
+.header-logo__caption {
+  color: #000000;
 }

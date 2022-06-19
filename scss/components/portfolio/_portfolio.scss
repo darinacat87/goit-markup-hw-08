@@ -7,10 +7,16 @@
   margin-bottom: 50px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+
+  @include mq(mobile-only) {
+    justify-content: flex-start;
+  }
 }
 
 .nav-btn:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .navigation-btn {
@@ -31,18 +37,19 @@
     background-color var(--transition-timing) var(--transition-function),
     box-shadow var(--transition-timing) var(--transition-function);
 
-&:hover,
-&:focus {
-  background-color: var(--accent-bg-cl);
-  color: var(--secondary-txt-cl);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+  &:hover,
+  &:focus {
+    background-color: var(--accent-bg-cl);
+    color: var(--secondary-txt-cl);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .projects-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .projects-item {
@@ -51,9 +58,23 @@
   margin-bottom: 30px;
 
   &:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @include mq(mobile-only) {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  @include mq(tablet-only) {
+    margin-right: 0px;
+    width: 354px;
+  }
 }
+
+.projects-item-link {
+  width: 100%;
 }
 
 .projects-item:nth-child(3n) {
@@ -73,7 +94,6 @@
   color: var(--main-txt-cl);
 }
 
-
 .projects-item-link:hover,
 .projects-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -81,10 +101,14 @@
 }
 
 .projects-group {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
   padding-top: 20px;
   padding-right: 24px;
   padding-left: 24px;
   padding-bottom: 20px;
+  height: 146px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -103,11 +127,11 @@
   color: currentColor;
   transition: box-shadow var(--transition-timing) var(--transition-function);
 
-&:hover,
-&:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .card-overlay-blue {

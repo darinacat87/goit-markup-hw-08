@@ -1,14 +1,24 @@
 .clients-list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .clients-item {
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 170px;
   height: 92px;
-}
+  @include mq(mobile-only) {
+    width: 210px;
+    height: 92px;
+  }
 
-.clients-item:not(:last-child) {
-  margin-right: 30px;
+  @include mq(tablet-only) {
+    width: 226px;
+    height: 92px;
+  }
 }
 
 .clients-link {
@@ -23,18 +33,18 @@
   transition: color var(--transition-timing) var(--transition-function),
     border-color var(--transition-timing) var(--transition-function);
 
-    &:hover,
-&:focus {
-  color: var(--accent-cl);
-  border-color: var(--accent-cl);
-}
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+    border-color: var(--accent-cl);
+  }
 }
 
 .clients-icon {
   fill: currentColor;
 }
 
-clients-members {
+.clients-members {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -42,4 +52,14 @@ clients-members {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+
+  @include mq(mobile-only) {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  @include mq(tablet-only) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
