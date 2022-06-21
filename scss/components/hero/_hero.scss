@@ -83,6 +83,6 @@
   }
 
   @include mq(not-desktop) {
-    width: 100%;
+    width: 360px;
   }
 }
