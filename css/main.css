@@ -1736,19 +1736,21 @@ img {
 }
 
 .mobile-menu__socials {
+  margin-top: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-top: 64px;
+  gap: 10px;
 }
 
 .mobile-menu__socials .mobile-menu__item {
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-right: 10px;
   padding-left: 10px;
   border-left: 1px solid #21212133;
 }
@@ -1760,7 +1762,8 @@ img {
 
 .mobile-menu__socials .mobile-menu__link {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22px;
+  letter-spacing: 0.02em;
   color: var(--accent-cl);
 }
 
