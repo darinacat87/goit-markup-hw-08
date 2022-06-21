@@ -1,23 +1,19 @@
 .clients-list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .clients-item {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 170px;
   height: 92px;
-  @include mq(mobile-only) {
-    width: 210px;
-    height: 92px;
+  flex-basis: calc((100% - 30px) / 2);
+
+  @include mq(tablet) {
+    flex-basis: calc((100% - 2 * 30px) / 3);
   }
 
-  @include mq(tablet-only) {
-    width: 226px;
-    height: 92px;
+  @include mq(desktop) {
+    flex-basis: calc((100% - 5 * 30px) / 6);
   }
 }
 
@@ -45,21 +41,15 @@
 }
 
 .clients-members {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
 
-  @include mq(mobile-only) {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-
-  @include mq(tablet-only) {
-    font-size: 28px;
-    margin-bottom: 30px;
+  @include mq(desktop) {
+    font-size: 36px;
+    margin-bottom: 50px;
   }
 }

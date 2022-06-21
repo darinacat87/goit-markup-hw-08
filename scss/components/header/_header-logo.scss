@@ -13,10 +13,13 @@
   padding-top: 25px;
   padding-bottom: 24px;
 
-  margin-right: 93px;
   z-index: 9;
   @include mq(tablet-only) {
     margin-right: 53px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 93px;
   }
 }
 
