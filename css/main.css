@@ -381,17 +381,17 @@ img {
           justify-content: center;
 }
 
+@media screen and (min-width: 480px) {
+  .hero-title {
+    width: 360px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-size: 44px;
     line-height: 1.36;
     width: 696px;
-  }
-}
-
-@media screen and (max-width: 1199.98px) {
-  .hero-title {
-    width: 360px;
   }
 }
 

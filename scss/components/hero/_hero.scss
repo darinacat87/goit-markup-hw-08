@@ -76,13 +76,13 @@
   text-align: center;
   justify-content: center;
 
+  @include mq(mobile) {
+    width: 360px;
+  }
+
   @include mq(desktop) {
     font-size: 44px;
     line-height: 1.36;
     width: 696px;
-  }
-
-  @include mq(not-desktop) {
-    width: 360px;
   }
 }
