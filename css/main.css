@@ -464,7 +464,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1000;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -487,8 +487,8 @@ img {
 
 .modal-wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 40px;
   background-color: var(--main-bg-cl);
@@ -496,16 +496,18 @@ img {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   opacity: 1;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: opacity var(--transition-timing) var(--transition-function), -webkit-transform var(--transition-timing) var(--transition-function);
-  transition: opacity var(--transition-timing) var(--transition-function), -webkit-transform var(--transition-timing) var(--transition-function);
-  transition: transform var(--transition-timing) var(--transition-function), opacity var(--transition-timing) var(--transition-function);
-  transition: transform var(--transition-timing) var(--transition-function), opacity var(--transition-timing) var(--transition-function), -webkit-transform var(--transition-timing) var(--transition-function);
 }
 
 @media screen and (min-width: 480px) {
   .modal-wrapper {
+    top: 50%;
+    left: 50%;
+    -webkit-transition: opacity var(--transition-timing) var(--transition-function), -webkit-transform var(--transition-timing) var(--transition-function);
+    transition: opacity var(--transition-timing) var(--transition-function), -webkit-transform var(--transition-timing) var(--transition-function);
+    transition: transform var(--transition-timing) var(--transition-function), opacity var(--transition-timing) var(--transition-function);
+    transition: transform var(--transition-timing) var(--transition-function), opacity var(--transition-timing) var(--transition-function), -webkit-transform var(--transition-timing) var(--transition-function);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
     width: 450px;
     height: 609px;
   }
@@ -682,22 +684,30 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 30px;
 }
 
 .checkbox-container {
   position: relative;
   display: block;
-  width: 16px;
+  min-width: 16px;
   height: 15px;
-  margin-right: 8px;
   cursor: pointer;
+  line-height: 1.71;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-container {
+    margin-top: 4px;
+  }
 }
 
 .checkbox-icon-checked {
@@ -757,7 +767,7 @@ img {
 }
 
 .checkbox-label {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   cursor: pointer;
@@ -766,11 +776,12 @@ img {
       -ms-user-select: none;
           user-select: none;
   color: var(--gris-txt-cl);
+  text-align: left;
 }
 
-@media screen and (max-width: 1199.98px) {
+@media screen and (min-width: 1200px) {
   .checkbox-label {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 

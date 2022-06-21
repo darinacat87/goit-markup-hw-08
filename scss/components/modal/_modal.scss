@@ -9,7 +9,7 @@
   transition: opacity var(--transition-timing) var(--transition-function),
     visibility var(--transition-timing) var(--transition-function);
   overflow-y: scroll;
-}
+} 
 
 .modal-backdrop.is-hidden {
   visibility: hidden;
@@ -33,12 +33,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   opacity: 1;
-  transition: transform var(--transition-timing) var(--transition-function),
-    opacity var(--transition-timing) var(--transition-function);
 
   @include mq(mobile) {
     top: 50%;
     left: 50%;
+    transition: transform var(--transition-timing) var(--transition-function),
+    opacity var(--transition-timing) var(--transition-function);
     transform: translate(-50%, -50%) scale(1);
     width: 450px;
     height: 609px;
